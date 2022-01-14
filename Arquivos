@@ -1,0 +1,4 @@
+  curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'post');
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'put');
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'delete');
+        
