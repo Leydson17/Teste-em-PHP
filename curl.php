@@ -3,23 +3,22 @@
 <html>
         <head>
                 <meta charset="UTF - 8">
-                <h1>Alunos </h1>
+                <h1> Alunos </h1>
         </head>
 
         <body>
 <?php
-        // inicia o curl
-        $curl = curl_init();
+        $url = "https://www.unigran.br/campogrande/api/index.php/teste/tecnico";
+        $ch = curl_init($url);
 
-        // Define as configurações
-        curl_setopt($curl, CURLOPT_URL,"https://www.unigran.br/campogrande/api/index.php/teste/tecnico");
-        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
-      
-        // Executa a Requisição
-        $output = curl_exec($curl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 
-        // Fecha a conexão
-        curl_close($curl); 
+        $resultado = json_decode(curl_exec($ch));
+        echo "Nome" . $nome -> nome . "<br>";
+       
+        
+        curl_close($ch); 
 ?>
         </body>
 </html>
