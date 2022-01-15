@@ -5,7 +5,7 @@
         <title>Celke</title>
     </head>
     <body>
-        <php
+        <?php
         $url = "https://swapi.co/api/people/?page=2";
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -27,6 +27,6 @@
             
             echo "<hr>";
         }
-        >
+        ?>
     </body>
 </html>
